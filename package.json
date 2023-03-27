@@ -1,0 +1,25 @@
+{
+  "name": "ocr-pseudocode",
+  "displayName": "OCR Pseudocode",
+  "description": "OCR Pseudocode Syntax Highlighter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ocrpseudo",
+      "aliases": ["OCR Pseudocode", "ocrpseudo"],
+      "extensions": [".ocr"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "ocrpseudo",
+      "scopeName": "source.ocr",
+      "path": "./syntaxes/ocrpseudo.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "OCR Pseudocode",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#types"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.ocrpseudo",
+				"match": "\\b(return|function|if|while|for|else|then|to|elseif|endif|endfor|endfunction)\\b"
+			}]
+		},
+		"symbols": {
+			"patterns": [{
+				"name": "keyword.operator.ocrpseudo",
+				"match": "\\b(+|-|/|*|=)\\b"
+			}]
+		},
+		"types": {
+			"patterns": [{
+				"name": "variable.parameter.ocrpseudo",
+				"match": "\\b(string|integer)\\b"
+			}]
+		},
+		"comment": {
+			"patterns": [{
+				"name": "keyword.comment.line.double-slash.ocrpseudo",
+				"begin": "//",
+				"end": "$"
+			}]
+		}
+	},
+	"scopeName": "source.ocr"
+}
